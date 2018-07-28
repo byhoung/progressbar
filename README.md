@@ -17,12 +17,13 @@ npm start
 
 -   I could clean up the component by splitting the JSX into its own presentational component.
 -   I could expand this even more and create a way for the user to choose what type of progress bar style they want. (i.e. circle progress bar, vertical bar, horizontal bar, etc.)
+-   Currently every time I setState at the parent level, all the child components are rerendered even when nothing is changed. To solve this issue, I could add logic in the shouldComponentUpdate lifecycle hook to return false if nextProps have not changed.
 -   I could create customizeable event handlers that allow the user to trigger a function when the progress bar reaches 25%, 50%, 75%, 100%, etc. But this can be done already outside of the component.
 -   More parameters:
     -   I could let the user specify whether they want to have decimel places in the label or not
     -   I could add a parameter to let the user hide/show the label or add positioning
-    -  I could add bootstrappify the styling by adding parameters like barStyle="success/warning/danger"
-    - I could add other styling parameters like hide/show stripes 
+    -   I could add bootstrappify the styling by adding parameters like barStyle="success/warning/danger"
+    -   I could add other styling parameters like hide/show stripes
 
 #### Validation
 
