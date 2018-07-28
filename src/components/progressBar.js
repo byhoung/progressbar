@@ -25,7 +25,7 @@ class ProgressBar extends Component {
 	componentWillUpdate() {
 		const { data } = this.props;
 		const { value } = this.state;
-		if (data.value !== value) {
+		if (data && data.value !== value) {
 			this.setState({ value: data.value });
 		}
 	}

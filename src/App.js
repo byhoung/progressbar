@@ -40,6 +40,7 @@ class App extends Component {
 					<h1 className="App-title">Welcome to React</h1>
 				</header>
 				<div className="componentWrapper">
+					<ProgressBar />
 					<ProgressBar data={{ value: 25, min: 20, max: 50 }} />
 					<ProgressBar data={{ value: this.state.currVal }} styles={styles} />
 					<ProgressBar data={{ value: 10, min: 20, max: 50 }} />
