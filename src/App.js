@@ -41,7 +41,7 @@ class App extends Component {
 				</header>
 				<div className="componentWrapper">
 					<ProgressBar />
-					<ProgressBar data={{ value: 25, min: 20, max: 50 }} />
+					<ProgressBar data={{ value: 25, min: 20, max: 50 }} styles={{ bar: { background: 'orange' } }} />
 					<ProgressBar data={{ value: this.state.currVal }} styles={styles} />
 					<ProgressBar data={{ value: 10, min: 20, max: 50 }} />
 					<ProgressBar data={{ value: 25, max: 50 }} styles={{ bar: { background: 'blue' } }} />

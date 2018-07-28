@@ -21,6 +21,8 @@ npm start
 -   More parameters:
     -   I could let the user specify whether they want to have decimel places in the label or not
     -   I could add a parameter to let the user hide/show the label or add positioning
+    -  I could add bootstrappify the styling by adding parameters like barStyle="success/warning/danger"
+    - I could add other styling parameters like hide/show stripes 
 
 #### Validation
 
@@ -30,7 +32,7 @@ npm start
 
 -   Right now I'm using a mix of `js-in-css` to handle overriding default styles while using `css` to handle default styles. As an improvement I would probably standardize this and use either a
     -   styled-component library like `Radium` for more configurability
-        -   high configurability by explicitly stating the styles that the user can change (i.e. strokeWith, color, padding, borderRadius, striped)
+        -   high configurability by explicitly stating the styles that the user can change
         -   more room for errors in validation
     -   limit the number of configurations by adding a limited number of pre-built classes for the user to choose from to attach to the component using `Sass`. I could then create another UI that lets the user select which prebuilt theme they want to choose.
         -   less configurability
