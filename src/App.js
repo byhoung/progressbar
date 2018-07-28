@@ -29,7 +29,7 @@ class App extends Component {
 	timer() {
 		let val = Math.floor(Math.random() * 100);
 		this.setState({ currVal: val });
-		/* Used to simply trigger updates */
+		/* Used to simply trigger updates to show dynamic updating */
 	}
 
 	render() {

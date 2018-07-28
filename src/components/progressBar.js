@@ -25,8 +25,8 @@ class ProgressBar extends Component {
 	componentWillUpdate() {
 		const { data } = this.props;
 		const { value } = this.state;
-		if (data && data.value !== value) {
-			this.setState({ value: data.value });
+		if (data && data.value !== value) { //I thought about letting the user also change min/max values but decided that it doesn't make sense for those values to change after first render
+			this.setState({ value: data.value }); 
 		}
 	}
 
@@ -44,7 +44,7 @@ class ProgressBar extends Component {
 	render() {
 		const { value, min, max } = this.state;
 		const { styles } = this.props;
-		let progress = Math.floor((value / (max - min)) * 100);
+		let progress = Math.floor((value / (max - min)) * 100); //min, max values are used to find the percentage value
 		return (
 			<div className="progressWrapper" style={styles && styles.wrapper ? styles.wrapper : {}}>
 				<div className="bar" style={this.handleBarStyle(progress)}>
