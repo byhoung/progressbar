@@ -23,12 +23,13 @@ class App extends Component {
 		};
 	}
 	componentDidMount() {
-		this.countdown = setInterval(() => this.timer(), 5000);
+		this.countdown = setInterval(() => this.timer(), 3000);
 	}
 
 	timer() {
 		let val = Math.floor(Math.random() * 100);
 		this.setState({ currVal: val });
+		/* Used to simply trigger updates */
 	}
 
 	render() {
@@ -38,11 +39,13 @@ class App extends Component {
 					<img src={logo} className="App-logo" alt="logo" />
 					<h1 className="App-title">Welcome to React</h1>
 				</header>
-				<ProgressBar data={{ value: 25, min: 20, max: 50 }} />
-				<ProgressBar data={{ value: this.state.currVal }} styles={styles} />
-				<ProgressBar data={{ value: 10, min: 20, max: 50 }} />
-				<ProgressBar data={{ value: 25, max: 50 }} styles={{ bar: { background: 'blue' } }} />
-				<ProgressBar data={{ value: 25, min: 20 }} />
+				<div className="componentWrapper">
+					<ProgressBar data={{ value: 25, min: 20, max: 50 }} />
+					<ProgressBar data={{ value: this.state.currVal }} styles={styles} />
+					<ProgressBar data={{ value: 10, min: 20, max: 50 }} />
+					<ProgressBar data={{ value: 25, max: 50 }} styles={{ bar: { background: 'blue' } }} />
+					<ProgressBar data={{ value: 25, min: 20 }} />
+				</div>
 			</div>
 		);
 	}
